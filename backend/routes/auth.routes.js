@@ -1,1 +1,2 @@
 // login route
+// register route
