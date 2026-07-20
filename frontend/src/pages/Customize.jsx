@@ -105,4 +105,3 @@ const Customize = () => {
 };
 
 export default Customize;
-// minor tweak
