@@ -32,7 +32,8 @@ export const signUp = async (req, res) => {
 
     return res.status(201).json(user);
   } catch (error) {
-    return res.status(500).json({ message: `sign up error ${error}` });
+    console.error("Sign up error in backend:", error);
+    return res.status(500).json({ message: `Sign up error: ${error.message || error}` });
   }
 };
 
@@ -63,7 +64,8 @@ export const login = async (req, res) => {
 
     return res.status(201).json(user);
   } catch (error) {
-    return res.status(500).json({ message: `Login error ${error}` });
+    console.error("Login error in backend:", error);
+    return res.status(500).json({ message: `Login error: ${error.message || error}` });
   }
 };
 
